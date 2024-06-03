@@ -1,0 +1,41 @@
+@model IEnumerable<resume.Models.Candidate>
+<h1>Candidate List</h1>
+
+@foreach (var candidate in Model)
+{
+    <ul>
+        <li>@candidate.FullName</li>
+        <li>@candidate.City</li>
+        <li>@candidate.CityZip</li>
+        <li>@candidate.Phone</li>
+        <li>@candidate.Email</li>
+        @foreach (var tag in candidate.Skills)
+        {
+            <li>@tag</li>
+        }
+        @foreach (var tag in candidate.Employers)
+        {
+            <li>@tag</li>
+        }
+        @foreach (var tag in candidate.Locations)
+        {
+            <li>@tag</li>
+        }
+        @foreach (var tag in candidate.Roles)
+        {
+            <li>@tag</li>
+        }
+        @foreach (var tag in candidate.RoleStarts)
+        {
+            <li>@tag</li>
+        }
+        @foreach (var tag in candidate.RoleEnds)
+        {
+            <li>@tag</li>
+        }
+        @foreach (var tag in candidate.RoleDescriptions)
+        {
+            <li>@tag</li>
+        }
+    </ul>
+}

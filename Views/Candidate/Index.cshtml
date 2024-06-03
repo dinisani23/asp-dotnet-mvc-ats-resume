@@ -1,0 +1,234 @@
+<div class="text-center mb-5">
+    <h1 class="display-4">Fill your details</h1>
+</div>
+
+<form action="/Candidate/Process" method="POST" onsubmit="prepareTags()">
+<section>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <h3>Information</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5 p-3">
+                <div class="form-group mb-2">
+                    <label for="fullName">Full Name</label>
+                    <input name="fullName"class="form-control" id="fullName" placeholder="Example: Nur Dini binti Mohd Abdul Sani" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="city">City</label>
+                    <input name="city" class="form-control" id="city" placeholder="Example: Kuala Lumpur" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="cityZip">City Zip</label>
+                    <input name="cityZip" class="form-control" id="cityZip" placeholder="Example: 81030" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="phone">Phone</label>
+                    <input name="phone" class="form-control" id="phone" placeholder="Example: 01X-XXXXXXX" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="email">Email</label>
+                    <input name="email" class="form-control" id="email" placeholder="Example: mike@gmail.com" required>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <h3>Skills</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5 p-3">
+                <div class="tags-input">
+                    <ul id="tags"></ul>
+                    <input type="text" id="input-tag" placeholder="Example: Microsoft Excel">
+                    <input type="hidden" name="skillTags" id="hidden-tags" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <h3>Working Experience</h3>
+            </div>
+        </div>
+    </div>
+    <div id="experienceContainer" class="container justify-content-center align-items-center">
+        <div id="workExperience" class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5 p-3">
+                <div class="form-group mb-2">
+                    <label for="employer">Employer</label>
+                    <input name="employer" class="form-control" id="employer" placeholder="Example: Ministry of Education" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="location">Location</label>
+                    <input name="location" class="form-control" id="location" placeholder="Example: Pontian, Johor" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="role">Role</label>
+                    <input name="role" class="form-control" id="role" placeholder="Example: Teacher" required>
+                </div>
+                <div class="row form-group mb-2">
+                    <div class="col">
+                        <label for="roleStart">Start</label>
+                        <input name="roleStart" class="form-control" id="roleStart" placeholder="Example: May 2020" required>
+                    </div>
+                    <div class="col">
+                        <label for="roleEnd">End</label>
+                        <input name="roleEnd" class="form-control" id="roleEnd" placeholder="Example: June 2020/Present" required>
+                    </div>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="roleDescription">Description</label>
+                    <textarea name="roleDescription" class="form-control" id="roleDescription" rows="8" placeholder="- Manage co-curricular activities." required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <button id="addExperienceButton" onclick="addExperience()" type="button" class="btn btn-outline-dark">Add Experience</button>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <h3>Education & Certification</h3>
+            </div>
+        </div>
+    </div>
+    <div id="educationContainer" class="container justify-content-center align-items-center">
+        <div id="educationExperience" class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5 p-3">
+                <div class="form-group mb-2">
+                    <label for="university">Education Institution</label>
+                    <input name="university" class="form-control" id="university" placeholder="Example: University of Texas Austin" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="universityLocation">Location</label>
+                    <input name="universityLocation" class="form-control" id="universityLocation" placeholder="Example: Texas, Austin" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="program">Program</label>
+                    <input name="program" class="form-control" id="program" placeholder="Example: Bachelor of Computer Science" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="completion">Year of Completion</label>
+                    <input name="completion" class="form-control" id="completion" placeholder="Example: 2023" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="remark">Remark</label>
+                    <input name="remark" class="form-control" id="remark" placeholder="Example: Vice Chancellor Award/4.00" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <button id="addEducationButton" onclick="addEducation()" type="button" class="btn btn-outline-dark">Add Education</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="certificationContainer" class="container justify-content-center align-items-center mt-5">
+        <div id="certificationExperience" class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5 p-3">
+                <div class="form-group mb-2">
+                    <label for="title">Certificate Title</label>
+                    <input name="title" class="form-control" id="title" placeholder="Example: Introduction to Mathematical Thinking" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="certDescription">Brief Description</label>
+                    <textarea name="certDescription" class="form-control" id="certDescription" rows="2" placeholder="Example: Foundation in building mathematical thinking." required></textarea>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="link">Certificate Link</label>
+                    <input name="link" class="form-control" id="link" placeholder="Example: verify.certificate/YGGDNSK" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <button id="addCertificationButton" onclick="addCert()" type="button" class="btn btn-outline-dark">Add Certification</button>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section>
+	<div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <h3>Project</h3>
+            </div>
+        </div>
+    </div>
+    <div id="projectContainer" class="container justify-content-center align-items-center">
+        <div id="projectExperience" class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5 p-3">
+                <div class="form-group mb-2">
+                    <label for="project">Project Title</label>
+                    <input name="project" class="form-control" id="project" placeholder="Example: Exhibition Event" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="projectDescription">Brief Description</label>
+                    <textarea name="projectDescription" class="form-control" id="projectDescription" rows="3" placeholder="Example: Hosted an excellent event at Grand Hyatt Kuala Lumpur ballroom." required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 justify-content-center px-5">
+                <button id="addProjectButton" onclick="addProject()" type="button" class="btn btn-outline-dark">Add Project</button>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section>
+	<div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center px-5">
+                <button type="submit" class="btn btn-outline-info">Build My Resume</button>
+            </div>
+        </div>
+    </div>
+</section>
+</form>
+<script>
+    function prepareTags() {
+            const tagElements = tags.getElementsByTagName('li');
+            const tagValues = [];
+            for (let i = 0; i < tagElements.length; i++) {
+                //tagValues.push(tagElements[i].innerText);
+                let tagText = tagElements[i].innerText;
+                let trimmedTag = tagText.slice(0, -1); // Extract substring without the last character
+                tagValues.push(trimmedTag);
+            }
+            document.getElementById('hidden-tags').value = tagValues.join(',');
+        }
+</script>

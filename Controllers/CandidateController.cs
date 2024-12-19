@@ -32,53 +32,53 @@ public class CandidateController : Controller
         string skillsFetch = form["skillTags"].ToString();
         string[] tagArray = skillsFetch.Split(',');
 
-        IEnumerable<string> employersEnumerable = form["employer"].ToArray();
-        string[] employersArray = employersEnumerable.ToArray();
+        //IEnumerable<string> employersEnumerable = form["employer"].ToArray();
+        string[] employersArray = form["employer"].ToArray();
 
-        IEnumerable<string> locationsEnumerable = form["location"].ToArray();
-        string[] locationsArray = locationsEnumerable.ToArray();
+        //IEnumerable<string> locationsEnumerable = form["location"].ToArray();
+        string[] locationsArray = form["location"].ToArray();
 
-        IEnumerable<string> rolesEnumerable = form["role"].ToArray();
-        string[] rolesArray = rolesEnumerable.ToArray();
+        //IEnumerable<string> rolesEnumerable = form["role"].ToArray();
+        string[] rolesArray = form["role"].ToArray();
 
-        IEnumerable<string> roleStartsEnumerable = form["roleStart"].ToArray();
-        string[] roleStartsArray = roleStartsEnumerable.ToArray();
+        //IEnumerable<string> roleStartsEnumerable = form["roleStart"].ToArray();
+        string[] roleStartsArray = form["roleStart"].ToArray();
 
-        IEnumerable<string> roleEndsEnumerable = form["roleEnd"].ToArray();
-        string[] roleEndsArray = roleEndsEnumerable.ToArray();
+        //IEnumerable<string> roleEndsEnumerable = form["roleEnd"].ToArray();
+        string[] roleEndsArray = form["roleEnd"].ToArray();
 
-        IEnumerable<string> roleDescriptionsEnumerable = form["roleDescription"].ToArray();
-        string[] roleDescriptionsArray = roleDescriptionsEnumerable.ToArray();
+        //IEnumerable<string> roleDescriptionsEnumerable = form["roleDescription"].ToArray();
+        string[] roleDescriptionsArray = form["roleDescription"].ToArray();
 
-        IEnumerable<string> universitysEnumerable = form["university"].ToArray();
-        string[] universitysArray = universitysEnumerable.ToArray();
+        //IEnumerable<string> universitysEnumerable = form["university"].ToArray();
+        string[] universitysArray = form["university"].ToArray();
 
-        IEnumerable<string> universityLocationsEnumerable = form["universityLocation"].ToArray();
-        string[] universityLocationsArray = universityLocationsEnumerable.ToArray();
+        //IEnumerable<string> universityLocationsEnumerable = form["universityLocation"].ToArray();
+        string[] universityLocationsArray = form["universityLocation"].ToArray();
 
-        IEnumerable<string> programsEnumerable = form["program"].ToArray();
-        string[] programsArray = programsEnumerable.ToArray();
+        //IEnumerable<string> programsEnumerable = form["program"].ToArray();
+        string[] programsArray = form["program"].ToArray();
 
-        IEnumerable<string> completionsEnumerable = form["completion"].ToArray();
-        string[] completionsArray = completionsEnumerable.ToArray();
+        //IEnumerable<string> completionsEnumerable = form["completion"].ToArray();
+        string[] completionsArray = form["completion"].ToArray();
 
-        IEnumerable<string> remarksEnumerable = form["remark"].ToArray();
-        string[] remarksArray = remarksEnumerable.ToArray();
+        //IEnumerable<string> remarksEnumerable = form["remark"].ToArray();
+        string[] remarksArray = form["remark"].ToArray();
 
-        IEnumerable<string> titlesEnumerable = form["title"].ToArray();
-        string[] titlesArray = titlesEnumerable.ToArray();
+        //IEnumerable<string> titlesEnumerable = form["title"].ToArray();
+        string[] titlesArray = form["title"].ToArray();
 
-        IEnumerable<string> certDescriptionsEnumerable = form["certDescription"].ToArray();
-        string[] certDescriptionsArray = certDescriptionsEnumerable.ToArray();
+        //IEnumerable<string> certDescriptionsEnumerable = form["certDescription"].ToArray();
+        string[] certDescriptionsArray = form["certDescription"].ToArray();
 
-        IEnumerable<string> linksEnumerable = form["link"].ToArray();
-        string[] linksArray = linksEnumerable.ToArray();
+        //IEnumerable<string> linksEnumerable = form["link"].ToArray();
+        string[] linksArray = form["link"].ToArray();
 
-        IEnumerable<string> projectsEnumerable = form["project"].ToArray();
-        string[] projectsArray = projectsEnumerable.ToArray();
+        //IEnumerable<string> projectsEnumerable = form["project"].ToArray();
+        string[] projectsArray = form["project"].ToArray();
 
-        IEnumerable<string> projectDescriptionsEnumerable = form["projectDescription"].ToArray();
-        string[] projectDescriptionsArray = projectDescriptionsEnumerable.ToArray();
+        //IEnumerable<string> projectDescriptionsEnumerable = form["projectDescription"].ToArray();
+        string[] projectDescriptionsArray = form["projectDescription"].ToArray();
 
         /*List<string> employersFetch = new List<string>();
         List<string> locationsFetch = new List<string>();

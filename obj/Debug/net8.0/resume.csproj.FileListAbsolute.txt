@@ -32,3 +32,4 @@ D:\work\resume\obj\Debug\net8.0\resume.csproj.AssemblyReference.cache
 D:\work\resume\bin\Debug\net8.0\BouncyCastle.Crypto.dll
 D:\work\resume\bin\Debug\net8.0\itextsharp.dll
 D:\work\resume\obj\Debug\net8.0\resume.csproj.Up2Date
+D:\work\resume\obj\Debug\net8.0\resume.sourcelink.json
